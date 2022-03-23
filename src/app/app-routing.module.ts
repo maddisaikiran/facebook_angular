@@ -1,27 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddtimelineComponent } from './addtimeline/addtimeline.component';
-import { AdminaccountComponent } from './adminaccount/adminaccount.component';
-import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
-import { AdminloginComponent } from './adminlogin/adminlogin.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { FriendsComponent } from './friends/friends.component';
+import { AdminaccountComponent } from './components/admin/adminaccount/adminaccount.component';
+import { AdmindashboardComponent } from './components/admin/admindashboard/admindashboard.component';
+import { AdminloginComponent } from './components/admin/adminlogin/adminlogin.component';
+import { FriendsComponent } from './components/user/friends/friends.component';
+import { HomeComponent } from './components/user/home/home.component';
+
 import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
+
 import { LandingpageComponent } from './landingpage/landingpage.component';
-import { MytimelineComponent } from './mytimeline/mytimeline.component';
-import { NetworkComponent } from './network/network.component';
+import { MytimelineComponent } from './components/user/mytimeline/mytimeline.component';
+
 import { PasswordComponent } from './password/password.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { AuthGuard } from './shared/auth.guard';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SignupComponent } from './signup/signup.component';
-import { UpdateuserComponent } from './updateuser/updateuser.component';
-import { UseraccountComponent } from './useraccount/useraccount.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
-import { UsersComponent } from './users/users.component';
-import { ViewtimelineComponent } from './viewtimeline/viewtimeline.component';
+import { ViewtimelineComponent } from './components/user/viewtimeline/viewtimeline.component';
+import { NetworkComponent } from './components/user/network/network.component';
 
 
 const routes: Routes = [
@@ -34,19 +33,10 @@ const routes: Routes = [
     path: "signup",
     component: SignupComponent
   },
-  {
-    path: "dashboard",
-    component: DashboardComponent,
-    canActivate:[AuthGuard]
-  },
   // {
   //   path: "profile",
   //   component: ProfileComponent
   // },
-  {
-    path: "useraccount",
-    component: UseraccountComponent
-  },
   {
     path: "adminaccount",
     component: AdminaccountComponent
@@ -58,14 +48,6 @@ const routes: Routes = [
   {
     path: "userlogin",
     component: UserloginComponent
-  },
-  {
-    path: "users",
-    component: UsersComponent
-  },
-  {
-    path:"updateuser",
-    component:UpdateuserComponent
   },
   {
     path: "landingpage",
